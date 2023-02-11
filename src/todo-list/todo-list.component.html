@@ -15,7 +15,11 @@
 <div>
   <label name="label">
     New task
-    <input type="text" [(ngModel)]="tmpInput" name="label" />
+    <input
+      type="text"
+      [(ngModel)]="tmpInput"
+      name="label"
+      (keyup.enter)="addTodo()"
+    />
   </label>
-  <button (click)="addTodo()">Add</button>
 </div>
